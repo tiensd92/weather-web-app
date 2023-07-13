@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 
+import 'weather_current_location.dart';
+
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      width: 500,
+    return SizedBox(
+      width: 300,
       height: double.infinity,
-      child: ColoredBox(
-        color: Colors.white,
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+        ),
+        child: const Column(
+          children: [
+            WeatherCurrentLocation(),
+          ],
+        ),
       ),
     );
   }

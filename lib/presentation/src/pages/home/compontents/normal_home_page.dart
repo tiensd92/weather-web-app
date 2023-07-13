@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/presentation/src/pages/home/compontents/compontents.dart';
 
 import 'app_drawer.dart';
 import 'current_time.dart';
@@ -8,16 +9,12 @@ class NormalHomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(
-          child: Container(
-            child: Column(
-              children: [CurrentTime()],
-            ),
-          ),
+          child: HomeBody(),
         ),
-        const AppDrawer(),
+        AppDrawer(),
       ],
     );
   }
