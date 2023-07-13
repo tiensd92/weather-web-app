@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_drawer.dart';
+import 'current_time.dart';
 
 class NormalHomeBody extends StatelessWidget {
   const NormalHomeBody({super.key});
@@ -9,7 +10,13 @@ class NormalHomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Container()),
+        Expanded(
+          child: Container(
+            child: Column(
+              children: [CurrentTime()],
+            ),
+          ),
+        ),
         const AppDrawer(),
       ],
     );
